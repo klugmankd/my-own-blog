@@ -1,0 +1,20 @@
+{% from 'macro/header.twig' import header as page_header %}
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+            <meta charset="UTF-8" />
+            <title>{% block title %}{{ page }}{% endblock %}</title>
+            <link rel="stylesheet" href="/web/css/style.css">
+            <script type="text/javascript" src="/web/js/jquery.min.js"></script>
+    {% endblock %}
+</head>
+<body>
+{% block body %}
+    {{ page_header(menu) }}
+    {% block javascripts %}
+            <script type="text/javascript" src="/web/js/main.js"></script>
+    {% endblock %}
+{% endblock %}
+</body>
+</html>

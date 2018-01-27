@@ -1,0 +1,18 @@
+{% macro header(items) %}
+    <header>
+        <div class="nav-bar">
+            <ul class="nav-list">
+                {% for item in items %}
+                    <li class="item">
+                        <a href="{{ item.href }}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            {#{% if user.session|length > 0 %}
+                <div class="profile">
+                    {{ user.name }}
+                </div>
+            {% endif %}#}
+        </div>
+    </header>
+{% endmacro %}
